@@ -1,0 +1,66 @@
+.navbar-contacts-wrapper
+    background: #DDE0E2
+    padding: 10px 0
+.navbar-contacts
+    &__address
+        margin-right: 46px
+
+.navbar-wrapper
+    .navbar-contacts__phone
+        a
+            text-align: center
+            color: #000000
+            text-decoration: none
+            &:hover
+                text-decoration: none
+                color: #000000
+
+
+.navbar-search
+    position: relative
+    height: 40px
+    z-index: 15
+    &:after
+        content: ""
+        width: 40px
+        height: 40px
+        background: url("../images/icons/search.svg")
+        position: absolute
+        left: calc(100% - 40px)
+        top: 0
+        z-index: 15
+    &__input
+        background: #F6F6F6
+        border-radius: 15px
+        border: none
+        padding-left: 15px
+        width: 100%
+        z-index: 15
+        &:focus
+            outline: none
+    &__button
+        border: none
+        background: none
+    .navbar-result-block
+        display: none
+        width: 100%
+        z-index: 10
+        background: #F6F6F6
+        border-radius: 0 0 15px 15px
+        padding-left: 15px
+        padding-top: 10px
+        top: 75%
+        #navbar-result-list
+            padding-top: 10px
+.navbar-content
+    padding: 0
+    list-style: none
+.navbar
+    background: #46484E
+    height: 100px
+    .nav-link
+        color: #ffffff
+        &:hover
+            color: #ffffff
+            text-decoration: none
+

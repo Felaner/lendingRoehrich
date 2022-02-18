@@ -29,6 +29,7 @@ const app = express();
 // РОУТЫ
 
 const homeRoute = require('./routes/home');
+const aboutRoute = require('./routes/about');
 
 const keys = require('./keys');
 
@@ -96,6 +97,7 @@ app.use(express.urlencoded({extended: true}));
 // ПОДКЛЮЧЕНИЕ РОУТОВ
 
 app.use('/', homeRoute);
+app.use('/about', aboutRoute);
 
 app.use(errorHandler);
 
