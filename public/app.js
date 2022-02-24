@@ -41,3 +41,50 @@ function search() {
 }
 
 document.getElementById("search").addEventListener('keyup', search);
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.carousel').forEach((el, index) => {
+        let pr = el.querySelector('button.paginate-left');
+        let pl = el.querySelector('button.paginate-right');
+        let click = 0
+
+        pr.addEventListener('click', function (el) {
+            pr.disabled = true
+            --click
+            slide(-1);
+            setTimeout(function (){
+                pr.disabled = false
+            }, 600)
+        })
+        pl.addEventListener('click', function (el) {
+            pl.disabled = true
+            ++click
+            slide(1);
+            setTimeout(function (){
+                pl.disabled = false
+            }, 600)
+        })
+
+        let indexSlide = 0,
+            total = el.querySelectorAll('.carousel-item').length
+        function slide(offset) {
+            indexSlide = Math.min( Math.max( indexSlide + offset, 0 ), total - 1 );
+            if (click > indexSlide) {
+                el.querySelector( '.counter' ).innerHTML = ( 1 ) + ' / ' + total;
+                indexSlide = 0
+                click = 0
+            } else if (click < 0) {
+                el.querySelector( '.counter' ).innerHTML = ( total ) + ' / ' + total;
+                indexSlide = total - 1
+                click = total - 1
+                console.log(click)
+                console.log(indexSlide)
+            } else {
+                el.querySelector( '.counter' ).innerHTML = ( indexSlide + 1 ) + ' / ' + total;
+            }
+            // pr.setAttribute( 'data-state', indexSlide === 0 ? 'disabled' : '' );
+            // pl.setAttribute( 'data-state', indexSlide === total - 1 ? 'disabled' : '' );
+        }
+        slide(0);
+    })
+})

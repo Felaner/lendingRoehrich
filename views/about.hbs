@@ -49,7 +49,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12 text-center f-35 fw-bold about-title">О компании</div>
-            <div class="col-md-6 col-12 mb-3 d-flex justify-content-center"><img class="img-fluid" src="/images/about/about.png" alt="about"></div>
+            <div class="col-md-6 col-12 mb-3 d-flex justify-content-center px-4"><img class="img-fluid" src="/images/about/about.png" alt="about"></div>
             <div class="col-md-6 col-12 f-17">Наша компания «Roehrich» много лет занимается изготовлением конструкций из металла любой сложности в Сибирском федеральном округе, а также в регионах России. Наш завод по обработке металлов расположен в городе Новосибирске.
 
                 Нами наработан большой опыт по изготовлению металлоконструкций.
@@ -77,12 +77,7 @@
             <div class="col-12 text-center f-35 fw-bold about-title">Сертификаты и лицензии</div>
             <div class="col-12 mt-5 d-sm-flex justify-content-center d-none">
                 <div class="triple-carousel-wrapper w-100">
-                    <div id="carouselLettersIndicators" class="carousel slide triple-carousel license-carousel" data-bs-ride="carousel" data-bs-interval="false">
-                        <ol class="carousel-indicators">
-                            <button type="button" data-bs-target="#carouselLettersIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#carouselLettersIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#carouselLettersIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                        </ol>
+                    <div id="carouselLetters1Indicators" class="carousel slide triple-carousel license-carousel" data-bs-ride="carousel" data-bs-interval="false">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <div class="row">
@@ -106,11 +101,12 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="custom-control-prev" type="button" data-bs-target="#carouselLettersIndicators"  data-bs-slide="prev">
+                        <button class="custom-control-prev paginate-left" type="button" data-bs-target="#carouselLetters1Indicators"  data-bs-slide="prev">
                             <img src="/images/icons/left-arrow.svg" class="custom-control-prev-icon" aria-hidden="true">
                             <span class="visually-hidden">Предыдущий</span>
                         </button>
-                        <button class="custom-control-next" type="button" data-bs-target="#carouselLettersIndicators"  data-bs-slide="next">
+                        <span class="counter"></span>
+                        <button class="custom-control-next paginate-right" type="button" data-bs-target="#carouselLetters1Indicators"  data-bs-slide="next">
                             <img src="/images/icons/right-arrow.svg" class="custom-control-next-icon" aria-hidden="true">
                             <span class="visually-hidden">Следующий</span>
                         </button>
@@ -140,11 +136,6 @@
             <div class="col-12 mt-5 d-sm-flex justify-content-center d-none">
                 <div class="triple-carousel-wrapper w-100">
                     <div id="carouselLettersIndicators" class="carousel slide triple-carousel license-carousel" data-bs-ride="carousel" data-bs-interval="false">
-                        <ol class="carousel-indicators">
-                            <button type="button" data-bs-target="#carouselLettersIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#carouselLettersIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#carouselLettersIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                        </ol>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <div class="row">
@@ -168,11 +159,12 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="custom-control-prev" type="button" data-bs-target="#carouselLettersIndicators"  data-bs-slide="prev">
+                        <button class="custom-control-prev paginate-left" type="button" data-bs-target="#carouselLettersIndicators"  data-bs-slide="prev">
                             <img src="/images/icons/left-arrow.svg" class="custom-control-prev-icon" aria-hidden="true">
                             <span class="visually-hidden">Предыдущий</span>
                         </button>
-                        <button class="custom-control-next" type="button" data-bs-target="#carouselLettersIndicators"  data-bs-slide="next">
+                        <span class="counter"></span>
+                        <button class="custom-control-next paginate-right" type="button" data-bs-target="#carouselLettersIndicators"  data-bs-slide="next">
                             <img src="/images/icons/right-arrow.svg" class="custom-control-next-icon" aria-hidden="true">
                             <span class="visually-hidden">Следующий</span>
                         </button>
@@ -196,9 +188,9 @@
     </div>
 </section>
 
+<div class="row w-100"><div class="col-12 text-center f-35 fw-bold contacts-title mb-sm-0 mt-5">Наши контакты</div></div>
 <section class="contacts-wrapper">
     <div class="container">
-        <div class="row"><div class="col-12 text-center f-35 fw-bold contacts-title mb-sm-0 mb-3">Наши контакты</div></div>
         <div class="row contacts">
             <div class="col-12 f-35 contacts-subtitle fw-bold text-md-start text-center">Как нас найти</div>
             <div class="col-md-6 col-12 p-sm-0 p-3 mb-md-0 mb-3 contacts-map">

@@ -32,5 +32,13 @@
     "sass": "^1.49.8",
     "sequelize": "^6.12.0-beta.1",
     "sharp": "^0.29.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Felaner/lendingRoehrich.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Felaner/lendingRoehrich/issues"
+  },
+  "homepage": "https://github.com/Felaner/lendingRoehrich#readme"
 }
