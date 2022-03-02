@@ -200,11 +200,24 @@ img {
   object-fit: cover;
 }
 
+.object-contain {
+  object-fit: contain !important;
+}
+
+.counter {
+  position: relative;
+  left: calc(50% - 79px);
+}
+
+.custom-control-prev {
+  margin-top: 20px;
+}
+
 .custom-control-prev, .custom-control-next {
   background: none;
   border: none;
   position: relative;
-  left: calc(50% - 59px);
+  left: calc(50% - 79px);
 }
 
 .carousel {
@@ -216,36 +229,26 @@ img {
 .carousel-item {
   height: 100%;
 }
-.carousel .single-carousel-item {
-  position: relative;
-  padding-bottom: 56.25%;
-  padding-top: 30px;
-  height: 0;
-  overflow: hidden;
+.carousel-item img {
+  object-fit: cover;
 }
-.carousel .single-carousel-item iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
+.carousel .single-carousel-item img {
+  width: 100% !important;
+  max-width: unset;
+}
+.carousel .full-carousel-item img {
+  width: 100% !important;
+  max-width: unset;
+  max-height: 500px;
+  object-fit: fill !important;
+}
+
+.triple-carousel-wrapper .triple-carousel {
+  max-height: 400px;
   width: 100%;
-  height: 100%;
 }
-.carousel .triple-carousel {
-  height: 100%;
-}
-.carousel .full-carousel-item {
-  position: relative;
-  padding-bottom: 34%;
-  padding-top: 30px;
-  height: 0;
-  overflow: hidden;
-}
-.carousel .full-carousel-item iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+.triple-carousel-wrapper .triple-carousel .carousel-item {
+  height: 400px;
 }
 
 .header {
@@ -283,13 +286,11 @@ img {
   margin-top: 32px;
 }
 .wheeler-videos__description {
-  margin-top: 20px;
+  padding: 20px 0;
   line-height: 145%;
-  padding-right: 50px;
-  padding-bottom: 20px;
 }
 .wheeler .wheeler-wrapper__photos {
-  margin-top: 100px;
+  margin-top: 40px;
 }
 .wheeler .wheeler-wrapper__photos .wheeler-photos__description {
   line-height: 145%;
@@ -311,8 +312,12 @@ img {
 .pits {
   margin-top: 80px;
 }
+.pits-description {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
 .pits .pits-photos {
-  margin-top: 100px;
+  margin-top: 20px;
 }
 
 .railing {
@@ -335,7 +340,7 @@ img {
   padding-bottom: 20px;
 }
 .railing .railing-wrapper__photos {
-  margin-top: 100px;
+  margin-top: 40px;
 }
 
 .balcony-railing {
@@ -365,14 +370,18 @@ img {
   padding-bottom: 20px;
 }
 .gates .gates-wrapper__photos {
-  margin-top: 100px;
+  margin-top: 40px;
 }
 
 .french-balconies {
   margin-top: 80px;
 }
+.french-balconies-description {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
 .french-balconies .french-balconies-photos {
-  margin-top: 100px;
+  margin-top: 20px;
 }
 
 .anchors {
@@ -389,21 +398,60 @@ img {
   margin-top: 32px;
 }
 .anchors-videos__description {
-  margin-top: 20px;
+  padding: 20px 0;
   line-height: 145%;
-  padding-right: 50px;
-  padding-bottom: 20px;
 }
 .anchors .anchors-wrapper__photos {
-  margin-top: 100px;
+  margin-top: 40px;
 }
 
 .rebar {
   margin-top: 80px;
-  margin-bottom: 150px;
+  margin-bottom: 100px;
+}
+.rebar-description {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 .rebar .rebar-photos {
-  margin-top: 100px;
+  margin-top: 20px;
+}
+
+.porch {
+  margin-bottom: 100px;
+}
+.porch-wrapper {
+  height: 100%;
+}
+.porch-videos {
+  height: 100%;
+  background: #DDE0E2;
+}
+.porch-videos__title {
+  margin-top: 32px;
+}
+.porch-videos__description {
+  padding: 20px 0;
+  line-height: 145%;
+}
+.porch .porch-wrapper__photos {
+  margin-top: 40px;
+}
+.porch .porch-wrapper__photos .porch-photos__description {
+  line-height: 145%;
+  padding-right: 50px;
+}
+.porch .porch-wrapper__photos .porch-photos-carousel {
+  height: auto;
+}
+.porch .porch-wrapper__photos .porch-photos-carousel .carousel-inner {
+  height: 100%;
+}
+.porch .porch-wrapper__photos .porch-photos-carousel .carousel-inner .carousel-item {
+  height: 100%;
+}
+.porch .porch-wrapper__photos .porch-photos-carousel .carousel-inner .carousel-item__video {
+  height: 100%;
 }
 
 .advantages-wrapper {
@@ -437,7 +485,7 @@ img {
   height: 100%;
   position: relative;
   margin-top: 20px;
-  padding-bottom: 150px;
+  padding-bottom: 75px;
 }
 .about-wrapper:before {
   content: "";
@@ -449,25 +497,50 @@ img {
   z-index: -100;
 }
 .about-wrapper .about-title {
-  margin-top: 70px;
-  margin-bottom: 25px;
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+.about-wrapper img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
 }
 
 .license-wrapper {
   margin-top: 70px;
 }
+.license-wrapper .triple-carousel-wrapper .license-carousel {
+  max-height: unset;
+  width: unset;
+}
+.license-wrapper .triple-carousel-wrapper .license-carousel .carousel-item {
+  height: unset;
+}
+.license-wrapper .triple-carousel-wrapper .license-carousel .carousel-item img {
+  max-width: inherit;
+  object-fit: unset;
+}
 
 .letters-wrapper {
   margin-top: 70px;
 }
+.letters-wrapper .triple-carousel-wrapper .license-carousel {
+  max-height: unset;
+  width: unset;
+}
+.letters-wrapper .triple-carousel-wrapper .license-carousel .carousel-item {
+  height: unset;
+}
+.letters-wrapper .triple-carousel-wrapper .license-carousel .carousel-item img {
+  max-width: inherit;
+  object-fit: unset;
+}
 
 .contacts-wrapper {
-  background-size: 100% 100%;
-  padding-bottom: 100px;
-  margin-top: 70px;
-}
-.contacts-wrapper .contacts {
   background: url("../../images/backgorunds/contacts-bg.png") no-repeat;
+  background-size: 100%;
+  padding-bottom: 100px;
+  margin-top: 35px;
 }
 .contacts-wrapper .contacts .contacts-subtitle {
   color: #ffffff;
@@ -502,7 +575,10 @@ img {
   right: 0;
   z-index: -100;
 }
-.map-wrapper .map-subtitle {
+.map-wrapper .map-block {
+  height: 500px;
+}
+.map-wrapper .map-block .map-subtitle {
   text-align: right;
   margin-bottom: 35px;
 }
@@ -512,15 +588,22 @@ img {
   flex-wrap: nowrap;
   overflow-x: auto;
   overflow-y: hidden;
+  padding-bottom: 15px;
 }
 .horizontal-scroll .horizontal-scroll-box {
-  width: 100%;
   height: 250px;
 }
 .horizontal-scroll .horizontal-scroll-box img {
   height: 100%;
+  width: auto;
+  padding-right: 10px;
 }
 
+@media (max-width: 1399.98px) {
+  .contacts-wrapper .contacts .contacts-info {
+    padding-right: 20px;
+  }
+}
 @media (max-width: 1199.98px) {
   .navbar-contacts__address {
     margin-right: 16px;
@@ -545,12 +628,46 @@ img {
     margin-top: 45px;
   }
 
-  .about-wrapper {
-    padding-bottom: 100px;
+  .wheeler-photos__description {
+    padding-bottom: 40px;
   }
 
+  .railing-photos__description {
+    padding-bottom: 40px;
+  }
+
+  .gates-photos__description {
+    padding-bottom: 40px;
+  }
+
+  .anchors-photos__description {
+    padding-bottom: 40px;
+  }
+
+  .porch-photos__description {
+    padding-bottom: 40px;
+  }
+
+  .about-wrapper {
+    padding-bottom: 60px;
+  }
+
+  .contacts-wrapper .contacts-subtitle {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .contacts-wrapper .contacts .contacts-info {
+    padding: 30px 20px 40px 40px;
+  }
+
+  .map-wrapper {
+    padding-bottom: 50px;
+  }
   .map-wrapper:before {
-    width: 35%;
+    width: 40%;
+  }
+  .map-wrapper .map-block {
+    height: 380px;
   }
 }
 @media (max-width: 991.98px) {
@@ -581,32 +698,33 @@ img {
     padding-bottom: 10px;
   }
 
-  .wheeler {
-    margin-top: 50px;
-  }
   .wheeler .wheeler-wrapper__photos {
-    margin-top: 65px;
+    margin-top: 40px;
   }
 
   .railing {
     margin-top: 50px;
   }
   .railing .railing-wrapper__photos {
-    margin-top: 65px;
+    margin-top: 40px;
   }
 
   .gates {
     margin-top: 50px;
   }
   .gates .gates-wrapper__photos {
-    margin-top: 65px;
+    margin-top: 40px;
   }
 
   .anchors {
     margin-top: 50px;
   }
   .anchors .anchors-wrapper__photos {
-    margin-top: 65px;
+    margin-top: 40px;
+  }
+
+  .porch .porch-wrapper__photos {
+    margin-top: 40px;
   }
 
   .pits {
@@ -624,6 +742,20 @@ img {
   .rebar {
     margin-top: 50px;
   }
+
+  .contacts-wrapper {
+    background-size: 100% 100%;
+  }
+  .contacts-wrapper .contacts .contacts-info {
+    padding: 20px 15px;
+  }
+
+  .map-wrapper {
+    padding-bottom: 20px;
+  }
+  .map-wrapper .map-block {
+    height: 350px;
+  }
 }
 @media (max-width: 767.98px) {
   .wheeler {
@@ -631,7 +763,7 @@ img {
   }
 
   .pits .pits-photos {
-    margin-top: 60px;
+    margin-top: 20px;
   }
 
   .balcony-railing .balcony-railing-photos {
@@ -642,6 +774,9 @@ img {
     margin-top: 60px;
   }
 
+  .rebar {
+    margin-bottom: 40px;
+  }
   .rebar .rebar-photos {
     margin-top: 60px;
   }
@@ -660,7 +795,7 @@ img {
   .contacts-wrapper .contacts-map {
     height: 300px;
   }
-  .contacts-wrapper .contacts-info {
+  .contacts-wrapper .contacts .contacts-info {
     padding-bottom: 50px;
     padding-left: 0;
   }
@@ -672,6 +807,14 @@ img {
 @media (max-width: 575.98px) {
   .f-35 {
     font-size: 28px;
+  }
+
+  .f-24 {
+    font-size: 18px;
+  }
+
+  .f-17 {
+    font-size: 14px;
   }
 
   .header {
@@ -688,10 +831,6 @@ img {
 
   .description .description-text {
     padding: 45px 0;
-  }
-
-  .carousel .full-carousel-item {
-    padding-bottom: 54.25%;
   }
 
   .advantages-wrapper .advantages-title {
@@ -717,6 +856,14 @@ img {
 
   .footer-copyright {
     padding-top: 30px;
+  }
+
+  .french-balconies .french-balconies-photos {
+    margin-top: 20px;
+  }
+
+  .rebar .rebar-photos {
+    margin-top: 20px;
   }
 }
 
